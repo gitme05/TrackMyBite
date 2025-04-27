@@ -12,6 +12,7 @@
 - Provide personalized insights like BMI and weight tracking
 - Export user data for further analysis
 
+
 ## How to use the software
 
 1. *Register an Account*  
@@ -27,7 +28,7 @@
    View your daily and weekly calorie intake on the dashboard.
 
 5. *Set and Track Goals*  
-   Set a daily calorie target and monitor your success.
+   Set a daily calorie target and monitor your success. 
 
 6. *Use Health Tools*  
    Calculate your BMI and track weight changes over time.
