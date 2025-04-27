@@ -13,17 +13,9 @@
 - Provide personalized insights like BMI and weight tracking
 - Export user data for further analysis
 
-## Development Methodology
+## How to use the software
 
-- **Approach**: Agile Methodology
-- **Timeline**: 1 Month (4 Sprints)
-
-| Sprint | Focus | Goal |
-| :----: | :---- | :---- |
-| Sprint 1 | Core Features | Set up basic user registration, login, and daily meal tracking. |
-| Sprint 2 | Dashboard and Progress Tracking | Build a dashboard to display intake and track progress toward calorie goals. |
-| Sprint 3 | Personalization and User Engagement | Add personalization tools like BMI calculator and weight tracker for better engagement. |
-| Sprint 4 | Final Features and Deployment | Finalize features, test thoroughly, and prepare the system for deployment. |
+- 
 
 ## Features
 
@@ -42,8 +34,8 @@
 ## Tech Stack
 
 - **Frontend**: HTML, CSS
-- **Backend**: PHP
-- **Database**: MySQL (or similar)
+- **Backend**: NodeJs, ExpressJS
+- **Database**: MySQL
 
 ## Deployment
 
