@@ -11,7 +11,7 @@
 - Monitor progress toward health goals
 - Provide personalized insights like BMI and weight tracking
 - Export user data for further analysis
-
+- Responsive UIs
 
 ## How to use the software
 
