@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrackMyBite</title>
+  <link rel="stylesheet" href="/front-end/styles/styles.css" />
+</head>
+<script>
+    <button class="start-button" id="start-logging-btn">Start Logging Meals</button>
+
+
+  document.getElementById('start-logging-btn').addEventListener('click', () => {
+    window.location.href = 'meal-logging.html';
+  });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const openBtn = document.getElementById('open-meal-log');
+      const modal = document.getElementById('meal-log-modal');
+  
+      openBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+  
+        const res = await fetch('meal-logging.html');
+        const html = await res.text();
+        modal.innerHTML = html;
+        modal.classList.remove('hidden');
+  
+        const dateField = modal.querySelector('#meal-date');
+        if (dateField) dateField.value = new Date().toISOString().split('T')[0];
+  
+        modal.querySelector('#close-modal').addEventListener('click', () => {
+          modal.classList.add('hidden');
+          modal.innerHTML = '';
+        });
+  
+        // Handle form submit
+        modal.querySelector('#meal-log-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Meal added!');
+          modal.classList.add('hidden');
+          modal.innerHTML = '';
+        });
+      });
+    });
+  </script>
+  
+  
+<body class="body">
+
+  <nav class="navbar">
+    <div class="logo">TrackMyBite</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#" id="open-meal-log">Meal Log</a>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Track Your Meals.<br>Reach Your Goals.</h1>
+    <p>Simple and smart calorie tracking for a healthier you.</p>
+    <button class="start-button" onclick="window.location.href='meal-logging.html'">Start Logging Meals</button>
+
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <div>📝</div>
+      <h2>Meal Logging</h2>
+      <p>Easy daily food entry</p>
+    </div>
+    <div class="feature-box">
+      <div>🧮</div>
+      <h2>Calorie Tracking</h2>
+      <p>Auto-calculated totals</p>
+    </div>
+    <div class="feature-box">
+      <div>🎯</div>
+      <h2>Goal Setting</h2>
+      <p>Monitor daily goals</p>
+    </div>
+    <div class="feature-box">
+      <div>📊</div>
+      <h2>Dashboard</h2>
+      <p>See your progress</p>
+    </div>
+  </section>
+
+  <section class="summary">
+    <h2>Daily Summary</h2>
+    <div class="summary-item">
+      <span>Today's Logged Meals</span>
+      <span>220</span>
+    </div>
+    <div class="summary-item">
+      <span>Remaining Calories</span>
+      <span>280</span>
+    </div>
+  </section>
+  <div id="meal-log-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add Meal</h2>
+      <form id="meal-log-form">
+        <label for="meal-date">Date</label>
+        <input type="date" id="meal-date" required />
+  
+        <label for="meal-type">Meal Type</label>
+        <select id="meal-type" required>
+          <option value="">Select</option>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+        </select>
+  
+        <label for="food-items">Food Item(s)</label>
+        <textarea id="food-items" placeholder="E.g. Eggs, Rice" required></textarea>
+  
+        <label for="calories">Calories</label>
+        <input type="number" id="calories" required />
+  
+        <button type="submit">Add Meal</button>
+        <button type="button" id="close-modal">Cancel</button>
+      </form>
+    </div>
+  </div>
+  
+  <div id="meal-log-modal" class="modal hidden"></div>
+
+  
+  <footer class="footer">
+    <a href="#">About Us</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Contact Support</a>
+  </footer>
+
+</body>
+</html>
