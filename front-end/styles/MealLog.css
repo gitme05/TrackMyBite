@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.meal-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meal-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.meal-form button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.meal-form button:hover {
+  background-color: #0b5ed7;
+}
+
+.meal-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+}
+
+.meal-list li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}

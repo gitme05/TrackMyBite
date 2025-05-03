@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meal Log - Track My Bite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/front-end/styles/MealLog.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Track My Bite</div>
+    <nav class="nav-links">
+      <a href="/front-end/views/main.html">Home</a>
+      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+      <a href="/front-end/views/MealLog.html" class="active">Meal Log</a>
+      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+      <a href="/front-end/views/Preferences.html">Preferences</a>
+      <a href="/front-end/views/Profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add Meal</h2>
+      <form id="mealForm" class="meal-form">
+        <input type="text" id="foodInput" placeholder="Food name (e.g. Oatmeal)">
+        <input type="text" id="caloriesOutput" placeholder="Calories" readonly>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3>Meal Log</h3>
+      <ul id="mealList" class="meal-list"></ul>
+    </section>
+  </main>
+
+  <script src="/front-end/scripts/MealLog.js"></script>
+</body>
+</html>

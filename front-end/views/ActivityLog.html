@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activity Log</title>
+  <link rel="stylesheet" href="/front-end/styles/ActivityLog.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Track My Bite</div>
+    <nav>
+      <a href="/front-end/views/main.html">Home</a>
+      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+      <a href="/front-end/views/MealLog.html">Meal Log</a>
+      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+      <a href="/front-end/views/Preferences.html">Preferences</a>
+      <a href="/front-end/views/Profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Top section with title and calorie card -->
+    <form id="activity-form">
+      <label for="activity-date">Date:</label>
+      <input type="date" id="activity-date" name="activity-date" required>
+
+      <label for="activity-type">Activity Type:</label>
+      <input type="text" id="activity-type" name="activity-type" placeholder="e.g., Running" required>
+
+      <label for="duration">Duration (minutes):</label>
+      <input type="number" id="duration" name="duration" required>
+
+      <label for="calories-burned">Calories Burned:</label>
+      <input type="number" id="calories-burned" name="calories-burned" required>
+
+      <button type="submit">Add Activity</button>
+    </form>
+
+    <section id="activity-list">
+      <h2>Recent Activities</h2>
+      <ul>
+      </ul>
+    </section>
+  </main>
+
+
+  <script src="/front-end/scripts/ActivityLog.js"></script>
+</body>
+</html>

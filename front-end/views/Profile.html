@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Track My Bite</title>
+  <link rel="stylesheet" href="/front-end/styles/Profile.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Track My Bite</div>
+    <nav>
+      <a href="/front-end/views/main.html">Home</a>
+      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+      <a href="/front-end/views/MealLog.html">Meal Log</a>
+      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+      <a href="/front-end/views/Preferences.html">Preferences</a>
+      <a href="/front-end/views/Profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <h1>My Profile</h1>
+    <form id="profileForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Your full name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="example@email.com" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" min="1" required />
+
+      <label for="goal">Weight Goal (kg):</label>
+      <input type="number" id="goal" required />
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </main>
+
+  
+
+  <script src="/front-end/scripts/Profile.js"></script>
+</body>
+</html>
