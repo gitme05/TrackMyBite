@@ -3,7 +3,7 @@ const caloriesOutput = document.getElementById('caloriesOutput');
 const mealForm = document.getElementById('mealForm');
 const mealList = document.getElementById('mealList');
 
-// Sample food-calorie database
+
 const foodCalories = {
   'oatmeal': 150,
   'banana': 90,

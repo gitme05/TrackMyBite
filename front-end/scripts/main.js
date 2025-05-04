@@ -38,7 +38,7 @@ new Chart(calorieCtx, {
     labels: ['Consumed', 'Remaining'],
     datasets: [{
       data: [consumed, remaining],
-      backgroundColor: ['#f87171', '#34d399'], // red and green
+      backgroundColor: ['#f87171', '#34d399'],
       borderWidth: 1
     }]
   },
