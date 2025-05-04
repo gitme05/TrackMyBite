@@ -1,69 +1,98 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
 .signup-form {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  
-  }
-  
-  .signup-form h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    
-  }
-  
-  .signup-form .user-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
-  }
-  
-  .signup-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .signup-form input[type="text"],
-  .signup-form input[type="password"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .password-field {
-    position: relative;
-  }
-  
-  .password-field span {
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    font-size: 12px;
-    color: #007bff;
-    cursor: pointer;
-  }
-  
-  .account-text {
-    font-size: 12px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .account-text a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .signup-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .signup-button:hover {
-    background-color: #0056b3;
-  }
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  font-size: 48px;
+  color: #080c09; 
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  background: #fafafa;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.password-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.password-field input {
+  padding-right: 80px;
+}
+
+.password-field span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #0095f6;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.signup-button {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.signup-button:hover {
+  background-color: #007cd1;
+}
+
+.account-text {
+  font-size: 15px;
+  color: #333;
+  margin-top: 25px;
+}
+
+.account-text a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    margin-bottom: 35px;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    background: #fafafa;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .password-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .password-wrapper span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #0095f6;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .sign-in-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #007cd1;
+  }
+  
+  .forgot-password {
+    display: block;
+    font-size: 13px;
+    color: #00376b;
+    text-decoration: none;
+    margin-top: 15px;
+  }
+  
+  .signup-message {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+  
+  .signup-message a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

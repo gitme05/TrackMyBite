@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preferences - Track My Bite</title>
+  <link rel="stylesheet" href="/front-end/styles/preferences.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Track My Bite</div>
+    <nav>
+        <a href="/front-end/views/main.html">Home</a>
+        <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+        <a href="/front-end/views/MealLog.html">Meal Log</a>
+        <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+        <a href="/front-end/views/Preferences.html">Preferences</a>
+        <a href="/front-end/views/Profile.html">Profile</a>
+
+    </nav>
+  </header>
+
+  <main class="preferences">
+    <h1>Set Your Preferences & Goals</h1>
+    <form id="preferencesForm">
+      <fieldset>
+        <legend>Dietary Preferences</legend>
+        <label><input type="checkbox" name="preference" value="Vegetarian" /> Vegetarian</label>
+        <label><input type="checkbox" name="preference" value="Vegan" /> Vegan</label>
+        <label><input type="checkbox" name="preference" value="Gluten-Free" /> Gluten-Free</label>
+        <label><input type="checkbox" name="preference" value="Low Carb" /> Low Carb</label>
+        <label><input type="checkbox" name="preference" value="No Dairy" /> No Dairy</label>
+        <label><input type="checkbox" name="preference" value="Nut Allergy" /> Nut Allergy</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Health Goals</legend>
+        <label>
+          Daily Calorie Goal:
+          <input type="number" name="calorieGoal" min="1000" max="6000" required />
+        </label>
+        <label>
+          Weight Goal (kg):
+          <input type="number" name="weightGoal" step="0.1" min="30" max="300" required />
+        </label>
+        <label>
+          Goal Type:
+          <select name="goalType" required>
+            <option value="Lose Weight">Lose Weight</option>
+            <option value="Maintain Weight">Maintain Weight</option>
+            <option value="Gain Weight">Gain Weight</option>
+          </select>
+        </label>
+        <label>
+          Target Date:
+          <input type="date" name="targetDate" />
+        </label>
+      </fieldset>
+
+      <button type="submit">Save Preferences</button>
+    </form>
+
+    <h2>Saved Preferences:</h2>
+    <ul id="savedPreferences" class="saved-list"></ul>
+  </main>
+
+  
+
+  <script src="/front-end/scripts/preferences.js"></script>
+</body>
+</html>
