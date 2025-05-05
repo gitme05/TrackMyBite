@@ -9,7 +9,10 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">Track My Bite</div>
+    <div class="logo">
+      <img src="/front-end/assets/logo.png" alt="Logo" class="logo-img">
+      <span>Track My Bite</span>
+    </div>
     <nav>
       <a href="/front-end/views/main.html">Home</a>
       <a href="/front-end/views/ActivityLog.html">Activity Log</a>
@@ -21,25 +24,48 @@
   </header>
 
   <main class="profile-container">
-    <h1>My Profile</h1>
-    <form id="profileForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" placeholder="Your full name" required />
+    <div class="profile-card">
+      <h2>My Profile</h2>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="example@email.com" required />
+      <form id="profileForm" class="profile-section">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your full name" required />
 
-      <label for="age">Age:</label>
-      <input type="number" id="age" min="1" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@email.com" required />
 
-      <label for="goal">Weight Goal (kg):</label>
-      <input type="number" id="goal" required />
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="1" required />
 
-      <button type="submit">Save Changes</button>
-    </form>
+        <label for="goal">Weight Goal (kg):</label>
+        <input type="number" id="goal" required />
+
+        <button type="submit">Edit</button>
+      </form>
+
+      <div class="progress-section">
+        <h3>Progress</h3>
+        <div class="progress-arc">
+          <svg width="200" height="100">
+            <path d="M10 100 A90 90 0 0 1 190 100" stroke="#0077b6" stroke-width="10" fill="none"/>
+            <text x="100" y="60" text-anchor="middle" font-size="16" fill="#333" id="weightLost">0 kg lost</text>
+            <text x="100" y="80" text-anchor="middle" font-size="14" fill="#555" id="currentWeight">Current: 40 kg</text>
+          </svg>
+        </div>
+        
+      </div>
+
+      <div class="goals-section">
+        <h3>Goals</h3>
+        <p>Goal Weight: <strong>40 kg</strong></p>
+        <p>Current Weight: <strong id="goalWeight">40 kg</strong></p>
+        <p>Daily Calories: <strong>2,140 cal</strong></p>
+        <p>Carbs 238g / Fat 63g / Protein 95g</p>
+      </div>
+
+      <button class="logout-btn">Log Out</button>
+    </div>
   </main>
-
-  
 
   <script src="/front-end/scripts/Profile.js"></script>
 </body>
