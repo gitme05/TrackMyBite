@@ -8,9 +8,24 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   background-color: #f8f8f8;
   border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 .navbar .logo {
