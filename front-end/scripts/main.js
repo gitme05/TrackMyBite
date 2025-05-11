@@ -51,4 +51,3 @@ new Chart(calorieCtx, {
     }
   }
 });
-
