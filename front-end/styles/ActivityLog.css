@@ -10,8 +10,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .navbar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
   }
   
   .logo {
@@ -137,5 +144,20 @@ body {
   .cal-details p {
     margin: 4px 0;
     font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar nav {
+      margin-top: 1rem;
+    }
+  
+    .logo {
+      margin-bottom: 1rem;
+    }
   }
   
