@@ -11,12 +11,12 @@
   <div class="container">
     <div class="logo">
       <img src="/front-end/assets/Logo.png" alt="Track my Bite Logo" />
-        <h2 class="title">Track My Bite</h2>
+      <h2 class="title">Track My Bite</h2>
     </div>
 
     <div class="form-section">
-      <form>
-        <input type="text" placeholder="Email or Phone" required />
+      <form id="loginForm">
+        <input type="text" id="email" placeholder="Email or Phone" required />
 
         <div class="password-wrapper">
           <input type="password" id="password" placeholder="Password" required />
@@ -25,11 +25,10 @@
 
         <button type="submit" class="sign-in-btn">Log in</button>
 
-        <a href="#" class="forgot-password">Forgot password?</a>
       </form>
 
       <div class="signup-message">
-        Don't have an account? <a href="/front-end/views/signup.html">Sign up</a>
+        Don't have an account? <a href="/signup">Sign up</a>
       </div>
     </div>
   </div>

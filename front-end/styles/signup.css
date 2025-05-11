@@ -5,7 +5,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #fafafa;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .signup-form {
@@ -20,40 +22,41 @@ body {
 
 .icon {
   font-size: 48px;
-  color: #080c09; 
+  color: #080c09;
+  margin-bottom: 15px;
 }
 
-.logo h1 {
+.signup-form h2 {
   font-size: 24px;
   font-weight: 600;
-  color: #000000;
-  margin: 0;
+  color: #000;
+  margin-bottom: 25px;
 }
 
 .signup-form form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .signup-form input[type="text"],
 .signup-form input[type="password"] {
   width: 100%;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 14px 15px;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
   background: #fafafa;
-  box-sizing: border-box;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .password-field {
   position: relative;
-  margin-bottom: 20px;
 }
 
 .password-field input {
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
 .password-field span {
@@ -64,8 +67,7 @@ body {
   font-size: 14px;
   color: #0095f6;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+  user-select: none;
 }
 
 .signup-button {
@@ -78,7 +80,6 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 15px;
 }
 
 .signup-button:hover {
@@ -88,7 +89,6 @@ body {
 .account-text {
   font-size: 15px;
   color: #333;
-  margin-top: 25px;
 }
 
 .account-text a {

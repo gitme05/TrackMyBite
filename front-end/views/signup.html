@@ -13,21 +13,21 @@
     <h2>SIGN UP</h2>
 
     <form>
-      <input type="text" placeholder="First Name" name="firstName" required />
-      <input type="text" placeholder="Last Name" name="lastName" required />
-      <input type="text" placeholder="Username" name="username" required />
-
+      <input type="text" id="email" placeholder="Email" name="email" required />
       <div class="password-field">
-        <input type="password" placeholder="Password" name="password" required />
-        <span onclick="togglePassword()">Show</span>
+        <input type="password" id="password" placeholder="Password" name="password" required />
+        <span>show</span>
       </div>
 
       <div class="account-text">
-        Already have an account? <a href="/front-end/views/login.html">Login</a>
+        Already have an account? <a href="/login">Login</a>
       </div>
 
       <button type="submit" class="signup-button">Create Account</button>
     </form>
+
+    <div class="success-message" style="display:none; color:green;"></div>
+    <div class="error-message" style="display:none; color:red;"></div>
   </div>
 
   <script src="/front-end/scripts/signup.js"></script>
