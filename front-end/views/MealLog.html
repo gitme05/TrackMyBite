@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Meal Log - Track My Bite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/front-end/styles/MealLog.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/front-end/styles/MealLog.css" />
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo">
-    <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
-    <span>Track My Bite</span>
+      <img src="/front-end/assets/Logo.png" alt="Track My Bite Logo" class="logo-img" />
+      <span>Track My Bite</span>
     </div>
-    
     <nav>
       <a href="/front-end/views/Main.html">Home</a>
       <a href="/front-end/views/ActivityLog.html">Activity Log</a>
-      <a href="/front-end/views/MealLog.html">Meal Log</a>
+      <a href="/front-end/views/MealLog.html" class="active">Meal Log</a>
       <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
-      <a href="/front-end/views/Preferences.html">Preferences</a>
+      <a href="/front-end/views/Calculator.html">BMI Calculator</a>
       <a href="/front-end/views/Profile.html">Profile</a>
-  </nav>
-</header>
-
+    </nav>
+  </header>
 
   <main class="container">
+    <nav class="mini-nav" aria-label="Meal log and recipe navigation">
+      <a href="/front-end/views/MealLog.html" class="active" aria-current="page">Log Meal</a>
+      <a href="/front-end/views/Recipe.html">My Recipe</a>
+    </nav>
+
+    <input type="search" id="mealSearch" placeholder="Search meals..." aria-label="Search meals" />
+
     <section class="card">
       <h2>Add Meal</h2>
       <form id="mealForm" class="meal-form">
-        <input type="text" id="foodInput" placeholder="Food name (e.g. Oatmeal)">
-        <input type="text" id="caloriesOutput" placeholder="Calories" readonly>
+        <input type="text" id="foodInput" placeholder="Food name" required />
+        <input type="number" id="portionInput" placeholder="Portion size" min="0.1" step="0.1" required />
+        <input type="text" id="caloriesOutput" placeholder="Calories" readonly />
         <button type="submit">Add</button>
       </form>
     </section>
@@ -42,5 +47,13 @@
   </main>
 
   <script src="/front-end/scripts/MealLog.js"></script>
+  <script>
+    document.getElementById("mealSearch").addEventListener("input", function () {
+      const filter = this.value.toLowerCase();
+      document.querySelectorAll("#mealList li").forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(filter) ? "" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
