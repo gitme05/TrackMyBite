@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Demographics - Track My Bite</title>
+  <link rel="stylesheet" href="/front-end/styles/UserDemographics.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
+      <span>Track My Bite</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>User Demographics</h2>
+      <form id="demoForm" action="/back-end/save_demographics.php" method="POST">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="first_name" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="last_name" required>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+          <option value=""> </option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" required>
+
+        <label for="weight">Current Weight (kg):</label>
+        <input type="number" id="weight" name="current_weight" min="1" required>
+
+        <label for="height">Current Height (cm):</label>
+        <input type="number" id="height" name="current_height" min="1" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

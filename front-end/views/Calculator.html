@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="/front-end/styles/Calculator.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
+      <span>Track My Bite</span>
+    </div>
+    <nav>
+      <a href="/front-end/views/Main.html">Home</a>
+      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+      <a href="/front-end/views/MealLog.html">Meal Log</a>
+      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+      <a href="/front-end/views/Calculator.html" class="active">BMI Calculator</a>
+      <a href="/front-end/views/Profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>BMI Calculator</h1>
+    <div class="input-group">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" placeholder="e.g. 170" />
+    </div>
+    <div class="input-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" placeholder="e.g. 65" />
+    </div>
+    <button onclick="calculateBMI()">Calculate</button>
+    <div id="result"></div>
+  </main>
+
+  <script src="/front-end/scripts/Calculator.js"></script>
+</body>
+</html>

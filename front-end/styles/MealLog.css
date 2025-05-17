@@ -1,3 +1,4 @@
+/* Reset and base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -28,15 +29,15 @@ body {
   border-radius: 50%;
 }
 
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 .navbar nav a {
   margin-left: 1rem;
   text-decoration: none;
   color: #333;
+}
+
+.navbar nav a.active {
+  font-weight: bold;
+  color: #007BFF;
 }
 
 .container {
@@ -45,6 +46,29 @@ body {
   padding: 1rem;
 }
 
+/* Mini navbar */
+.mini-nav {
+  margin: 1rem 0;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  gap: 1rem;
+}
+
+.mini-nav a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+}
+
+.mini-nav a.active,
+.mini-nav a:hover {
+  color: #000;
+  border-color: #007BFF;
+}
+
+/* Forms and cards */
 .card {
   background-color: white;
   padding: 1rem;
@@ -59,7 +83,8 @@ body {
   gap: 10px;
 }
 
-.meal-form input[type="text"] {
+.meal-form input[type="text"],
+.meal-form input[type="number"] {
   flex: 1;
   padding: 8px;
   font-size: 1rem;
@@ -78,6 +103,17 @@ body {
   background-color: #0b5ed7;
 }
 
+/* Search bar */
+input[type="search"] {
+  margin: 0.5rem 0 1rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* List styling */
 .meal-list {
   list-style: none;
   padding: 0;
@@ -93,6 +129,7 @@ body {
   font-size: 0.95rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

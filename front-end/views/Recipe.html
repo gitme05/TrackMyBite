@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Recipe</title>
-  <link rel="stylesheet" href="/front-end/styles/Recipe.css">
+  <meta charset="UTF-8" />
+  <title>My Recipes - Track My Bite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/front-end/styles/MealLog.css" />
 </head>
 <body>
-  <div class="form-container">
-    <h1>New Recipe</h1>
+  <header class="navbar">
+    <div class="logo">
+      <img src="/front-end/assets/Logo.png" alt="Track My Bite Logo" class="logo-img" />
+      <span>Track My Bite</span>
+    </div>
+    <nav>
+      <a href="/front-end/views/Main.html">Home</a>
+      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+      <a href="/front-end/views/MealLog.html">Meal Log</a>
+      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+      <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+      <a href="/front-end/views/Profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
     
-    <div class="input-box">
-      <div class="input-group">
-        <label for="recipeName">Recipe Name</label>
-        <input type="text" id="recipeName" placeholder="Enter recipe name">
-      </div>
-      <div class="input-group">
-        <label for="servings">Servings</label>
-        <input type="number" id="servings" placeholder="e.g. 2">
-      </div>
-    </div>
+    <nav class="mini-nav" aria-label="Meal log and recipe navigation">
+      <a href="/front-end/views/MealLog.html">Log Meal</a>
+      <a href="/front-end/views/Recipe.html" class="active" aria-current="page">My Recipe</a>
+    </nav>
 
-    <div class="bulk-container">
-      <label for="bulkToggle"><strong>Bulk Import Ingredients</strong></label>
-      <p class="sub-text">Type or paste the list of ingredients and we'll match them to foods in our database.</p>
-      <label class="switch">
-        <input type="checkbox" id="bulkToggle" onclick="toggleTextarea()">
-        <span class="slider"></span>
-      </label>
-      <textarea id="ingredientArea" placeholder="Paste ingredients here..." style="display:none;"></textarea>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+    <input type="search" id="recipeSearch" placeholder="Search recipes..." aria-label="Search recipes" />
+
+
+    <section class="card">
+      <h2>My Recipe</h2>
+      <form id="recipeForm" class="meal-form">
+        <input type="text" id="recipeName" placeholder="Recipe name (e.g. Chicken Bowl)" required />
+        <select id="ingredientSelect" required>
+          <option value="">Select ingredient</option>
+       
+        </select>
+        <button type="button" id="addIngredient">Add Ingredient</button>
+
+        <ul id="ingredientList" class="meal-list"></ul>
+
+        <p><strong>Total Calories:</strong> <span id="totalCalories">0</span> kcal</p>
+        <button type="submit">Save Recipe</button>
+      </form>
+    </section>
+
+ 
+    <section class="card">
+      <h3>Saved Recipes</h3>
+      <ul id="recipeList" class="meal-list"></ul>
+    </section>
+  </main>
+
+  <script src="/front-end/scripts/Recipe.js"></script>
+  <script>
+    
+    document.getElementById("recipeSearch").addEventListener("input", function () {
+      const filter = this.value.toLowerCase();
+      document.querySelectorAll("#recipeList li").forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(filter) ? "" : "none";
+      });
+    });
+  </script>
 </body>
 </html>

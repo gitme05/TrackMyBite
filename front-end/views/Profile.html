@@ -2,71 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Profile - Track My Bite</title>
   <link rel="stylesheet" href="/front-end/styles/Profile.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">
-      <img src="/front-end/assets/logo.png" alt="Logo" class="logo-img">
-      <span>Track My Bite</span>
-    </div>
-    <nav>
-      <a href="/front-end/views/main.html">Home</a>
-      <a href="/front-end/views/ActivityLog.html">Activity Log</a>
-      <a href="/front-end/views/MealLog.html">Meal Log</a>
-      <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
-      <a href="/front-end/views/Preferences.html">Preferences</a>
-      <a href="/front-end/views/Profile.html">Profile</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">
+    <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img" />
+    <span>Track My Bite</span>
+  </div>
+  <nav>
+    <a href="/front-end/views/Main.html">Home</a>
+    <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+    <a href="/front-end/views/MealLog.html">Meal Log</a>
+    <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+    <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+    <a href="/front-end/views/Profile.html" class="active">Profile</a>
+  </nav>
+</header>
 
-  <main class="profile-container">
+<main class="main-wrapper">
+  <!-- Sidebar -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <button id="sidebarToggle" class="icon-btn" aria-label="Toggle Sidebar">☰</button>
+    <div class="sidebar-content">
+      <button id="editInfoBtn" class="sidebar-btn">
+        Edit Info
+        <span class="arrow">▶</span>
+      </button>
+      <div class="sub-buttons" id="editInfoSubmenu">
+        <button onclick="location.href='/front-end/views/UserDemographics.html'">User Demographics</button>
+        <button onclick="location.href='/front-end/views/UserPreferences.html'">User Preferences</button>
+        <button onclick="location.href='/front-end/views/UserCredentials.html'">User Credentials</button>
+      </div>
+
+      <button onclick="location.href='/front-end/views/Recipe.html'" class="sidebar-btn">My Recipes</button>
+      <button onclick="location.href='/front-end/views/Calculator.html'" class="sidebar-btn">BMI Calculator</button>
+
+      <button class="logout-btn" onclick="logout()">Log Out</button>
+    </div>
+  </aside>
+
+  <!-- Profile Content -->
+  <section class="profile-container">
     <div class="profile-card">
       <h2>My Profile</h2>
 
-      <form id="profileForm" class="profile-section">
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Your full name" required />
+      <div class="profile-details">
+        <p><strong>First Name:</strong> </p>
+        <p><strong>Last Name:</strong> </p>
+        <p><strong>Sex:</strong> </p>
+        <p><strong>Age:</strong> </p>
+        <p><strong>Current Weight:</strong> </p>
+        <p><strong>Current Height:</strong> </p>
+      </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="example@email.com" required />
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" min="1" required />
-
-        <label for="goal">Weight Goal (kg):</label>
-        <input type="number" id="goal" min="1" required />
-
-        <button type="submit">Edit</button>
-      </form>
+      <div class="goals-preferences">
+        <h2>Goals & Preferences</h2>
+        <p><strong>Dietary Preferences:</strong> </p>
+        <p><strong>Daily Calorie Goal:</strong> </p>
+        <p><strong>Weight Goal:</strong> </p>
+        <p><strong>Goal Type:</strong> </p>
+        <p><strong>Target Date:</strong> </p>
+      </div>
 
       <div class="progress-section">
         <h3>Progress</h3>
         <div class="progress-arc">
           <svg width="200" height="100">
             <path d="M10 100 A90 90 0 0 1 190 100" stroke="#0077b6" stroke-width="10" fill="none"/>
-            <text x="100" y="60" text-anchor="middle" font-size="16" fill="#333" id="weightLost">0 kg lost</text>
-            <text x="100" y="80" text-anchor="middle" font-size="14" fill="#555" id="currentWeight">Current: 40 kg</text>
+            <text x="100" y="60" text-anchor="middle" font-size="16" fill="#333" id="weightLost">5 kg lost</text>
+            <text x="100" y="80" text-anchor="middle" font-size="14" fill="#555" id="currentWeightText">Current: 70 kg</text>
           </svg>
         </div>
-        
       </div>
 
-      <div class="goals-section">
-        <h3>Goals</h3>
-        <p>Goal Weight: <strong>40 kg</strong></p>
-        <p>Current Weight: <strong id="goalWeight">40 kg</strong></p>
-        <p>Daily Calories: <strong>2,140 cal</strong></p>
-        <p>Carbs 238g / Fat 63g / Protein 95g</p>
-      </div>
-
-      <button class="logout-btn">Log Out</button>
     </div>
-  </main>
+  </section>
+</main>
 
-  <script src="/front-end/scripts/Profile.js"></script>
+<script src="/front-end/scripts/Profile.js"></script>
 </body>
 </html>
