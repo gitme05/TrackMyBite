@@ -9,20 +9,33 @@
 <body>
 
   <header class="navbar">
+  <div class="navbar-left">
     <div class="logo">
-    <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
-    <span>Track My Bite</span>
+      <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
+      <span>Track My Bite</span>
     </div>
-    
-    <nav>
-        <a href="/front-end/views/Main.html">Home</a>
-        <a href="/front-end/views/ActivityLog.html">Activity Log</a>
-        <a href="/front-end/views/MealLog.html">Meal Log</a>
-        <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
-        <a href="/front-end/views/Calculator.html">BMI Calculator</a>
-        <a href="/front-end/views/Profile.html">Profile</a>
-    </nav>
-  </header>
+  </div>
+
+  <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+
+  <nav class="navbar-links" id="navbarLinks">
+    <a href="/front-end/views/Main.html">Home</a>
+    <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+    <a href="/front-end/views/MealLog.html">Meal Log</a>
+    <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+    <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+    <a href="/front-end/views/Profile.html">Profile</a>
+  </nav>
+</header>
+
+<nav class="mobile-nav" id="mobileNavbarLinks">
+  <a href="/front-end/views/Main.html">Home</a>
+  <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+  <a href="/front-end/views/MealLog.html">Meal Log</a>
+  <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+  <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+  <a href="/front-end/views/Profile.html">Profile</a>
+</nav>
 
   <main class="weight-tracker-container">
     <h1>Weight Tracker</h1>
