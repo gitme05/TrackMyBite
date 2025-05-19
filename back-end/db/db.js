@@ -5,7 +5,7 @@ const db = mysql.createConnection({
   user: 'root',
   password: '',
   database: 'track_my_bitedb',
-  port: 6521
+  port: 3306
 });
 
 db.connect((err) => {
