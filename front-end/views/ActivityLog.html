@@ -8,48 +8,58 @@
 </head>
 <body>
 
-   <header class="navbar">
+<header class="navbar">
+  <div class="navbar-left">
     <div class="logo">
-    <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
-    <span>Track My Bite</span>
+      <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
+      <span>Track My Bite</span>
     </div>
-    
-    <nav>
-        <a href="/front-end/views/Main.html">Home</a>
-        <a href="/front-end/views/ActivityLog.html">Activity Log</a>
-        <a href="/front-end/views/MealLog.html">Meal Log</a>
-        <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
-        <a href="/front-end/views/Calculator.html">BMI Calculator</a>
-        <a href="/front-end/views/Profile.html">Profile</a>
-    </nav>
-  </header>
+  </div>
 
-  <main class="container">
-  
-    <form id="activity-form">
-      <label for="activity-date">Date:</label>
-      <input type="date" id="activity-date" name="activity-date" required>
+  <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
 
-      <label for="activity-type">Activity Type:</label>
-      <input type="text" id="activity-type" name="activity-type" placeholder="e.g., Running" required>
+  <nav class="navbar-links" id="navbarLinks">
+    <a href="/front-end/views/Main.html">Home</a>
+    <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+    <a href="/front-end/views/MealLog.html">Meal Log</a>
+    <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+    <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+    <a href="/front-end/views/Profile.html">Profile</a>
+  </nav>
+</header>
 
-      <label for="duration">Duration (minutes):</label>
-      <input type="number" id="duration" name="duration" required>
+<nav class="mobile-nav" id="mobileNavbarLinks">
+  <a href="/front-end/views/Main.html">Home</a>
+  <a href="/front-end/views/ActivityLog.html">Activity Log</a>
+  <a href="/front-end/views/MealLog.html">Meal Log</a>
+  <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
+  <a href="/front-end/views/Calculator.html">BMI Calculator</a>
+  <a href="/front-end/views/Profile.html">Profile</a>
+</nav>
 
-      <label for="calories-burned">Calories Burned:</label>
-      <input type="number" id="calories-burned" name="calories-burned" required>
+<main class="container">
+  <form id="activity-form">
+    <label for="activity-date">Date:</label>
+    <input type="date" id="activity-date" name="activity-date" required>
 
-      <button type="submit">Add Activity</button>
-    </form>
+    <label for="activity-type">Activity Type:</label>
+    <input type="text" id="activity-type" name="activity-type" placeholder="e.g., Running" required>
 
-    <section id="activity-list">
-      <h2>Recent Activities</h2>
-      <ul>
-      </ul>
-    </section>
-  </main>
+    <label for="duration">Duration (minutes):</label>
+    <input type="number" id="duration" name="duration" required>
 
+    <label for="calories-burned">Calories Burned:</label>
+    <input type="number" id="calories-burned" name="calories-burned" required>
 
-  <script src="/front-end/scripts/ActivityLog.js"></script>
+    <button type="submit">Add Activity</button>
+  </form>
+
+  <section id="activity-list">
+    <h2>Recent Activities</h2>
+    <ul></ul>
+  </section>
+</main>
+
+<script src="/front-end/scripts/ActivityLog.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  document.getElementById("mobileNavbarLinks").classList.toggle("show");
+});
+
+
 document.getElementById("weightForm").addEventListener("submit", function (e) {
     e.preventDefault();
   
