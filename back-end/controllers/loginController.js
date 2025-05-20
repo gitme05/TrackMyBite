@@ -1,5 +1,9 @@
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
 const db = require('../db/db');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
@@ -10,9 +14,7 @@ exports.loginUser = async (req, res) => {
 
   try {
     db.query('SELECT * FROM USER_CREDENTIALS WHERE EMAIL = ?', [email], async (err, result) => {
-      if (err) {
-        return res.status(500).json({ status: 'error', error: err.message });
-      }
+      if (err) return res.status(500).json({ status: 'error', error: err.message });
 
       if (result.length === 0) {
         return res.status(401).json({ status: 'error', error: 'Invalid email or password' });
@@ -24,7 +26,17 @@ exports.loginUser = async (req, res) => {
         return res.status(401).json({ status: 'error', error: 'Invalid email or password' });
       }
 
-      return res.status(200).json({ status: 'success', success: 'Login successful', userId: user.ID });
+      // ✅ Generate JWT
+      const token = jwt.sign({ id: user.ID }, JWT_SECRET, { expiresIn: '1h' });
+
+      // ✅ Set JWT in cookie
+            res.cookie('token', token, {
+        httpOnly: true,
+        secure: false, // true only in production with HTTPS
+        maxAge: 3600000,
+      });
+      
+      return res.status(200).json({ status: 'success', success: 'Login successful' });
     });
   } catch (error) {
     res.status(500).json({ status: 'error', error: error.message });
