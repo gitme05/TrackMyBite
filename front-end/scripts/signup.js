@@ -4,19 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form');
   const email = document.querySelector('#email');
   const password = document.querySelector('#password');
-
   const success = document.querySelector('.success-message');
   const error = document.querySelector('.error-message');
 
   toggle.addEventListener('click', function () {
-    const type = passwordInput.getAttribute('type');
-    if (type === 'password') {
-      passwordInput.setAttribute('type', 'text');
-      toggle.textContent = 'hide';
-    } else {
-      passwordInput.setAttribute('type', 'password');
-      toggle.textContent = 'show';
-    }
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    toggle.textContent = type === 'password' ? 'show' : 'hide';
   });
 
   form.addEventListener('submit', function (e) {

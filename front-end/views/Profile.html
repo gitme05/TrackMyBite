@@ -15,23 +15,23 @@
     <span>Track My Bite</span>
   </div>
   <nav>
-    <a href="/front-end/views/Main.html">Home</a>
-    <a href="/front-end/views/ActivityLog.html">Activity Log</a>
-    <a href="/front-end/views/MealLog.html">Meal Log</a>
-    <a href="/front-end/views/WeightTracker.html">Weight Tracker</a>
-    <a href="/front-end/views/Calculator.html">BMI Calculator</a>
-    <a href="/front-end/views/Profile.html" class="active">Profile</a>
+    <a href="/main">Home</a>
+    <a href="/activity-log">Activity Log</a>
+    <a href="/meal-log">Meal Log</a>
+    <a href="/weight-tracker">Weight Tracker</a>
+    <a href="/calculator">BMI Calculator</a>
+    <a href="/profile" class="active">Profile</a>
   </nav>
 </header>
 
 <main class="main-wrapper">
-  <!-- Sidebar -->
+
   <aside class="sidebar collapsed" id="sidebar">
     <button id="sidebarToggle" class="icon-btn" aria-label="Toggle Sidebar">☰</button>
     <div class="sidebar-content">
       <button id="editInfoBtn" class="sidebar-btn">
         Edit Info
-        <span class="arrow">▶</span>
+        <span class="arrow"></span>
       </button>
       <div class="sub-buttons" id="editInfoSubmenu">
         <button onclick="location.href='/front-end/views/UserDemographics.html'">User Demographics</button>
@@ -52,21 +52,21 @@
       <h2>My Profile</h2>
 
       <div class="profile-details">
-        <p><strong>First Name:</strong> </p>
-        <p><strong>Last Name:</strong> </p>
-        <p><strong>Sex:</strong> </p>
-        <p><strong>Age:</strong> </p>
-        <p><strong>Current Weight:</strong> </p>
-        <p><strong>Current Height:</strong> </p>
+        <p><strong>First Name:</strong></p>
+        <p><strong>Last Name:</strong></p>
+        <p><strong>Sex:</strong></p>
+        <p><strong>Age:</strong></p>
+        <p><strong>Current Weight:</strong></p>
+        <p><strong>Current Height:</strong></p>
       </div>
 
       <div class="goals-preferences">
         <h2>Goals & Preferences</h2>
-        <p><strong>Dietary Preferences:</strong> </p>
-        <p><strong>Daily Calorie Goal:</strong> </p>
-        <p><strong>Weight Goal:</strong> </p>
-        <p><strong>Goal Type:</strong> </p>
-        <p><strong>Target Date:</strong> </p>
+        <p><strong>Dietary Preferences:</strong></p>
+        <p><strong>Daily Calorie Goal:</strong></p>
+        <p><strong>Weight Goal:</strong></p>
+        <p><strong>Goal Type:</strong></p>
+        <p><strong>Target Date:</strong></p>
       </div>
 
       <div class="progress-section">
@@ -79,11 +79,10 @@
           </svg>
         </div>
       </div>
-
     </div>
   </section>
 </main>
 
-<script src="/front-end/scripts/Profile.js"></script>
+<script src="/front-end/scripts/profile.js"></script>
 </body>
 </html>

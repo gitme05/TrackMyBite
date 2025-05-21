@@ -1,20 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const sidebar = document.getElementById('sidebar');
   const sidebarToggle = document.getElementById('sidebarToggle');
   const editInfoBtn = document.getElementById('editInfoBtn');
-  const submenu = document.getElementById('editInfoSubmenu');
+  const editInfoSubmenu = document.getElementById('editInfoSubmenu');
 
-  sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('collapsed');
-  });
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  }
 
-  editInfoBtn.addEventListener('click', () => {
-    submenu.classList.toggle('active');
-    editInfoBtn.querySelector('.arrow').textContent = submenu.classList.contains('active') ? '▼' : '▶';
-  });
+  if (editInfoBtn && editInfoSubmenu) {
+    editInfoBtn.addEventListener('click', () => {
+      editInfoSubmenu.classList.toggle('show');
+    });
+  }
+
+  // Optional: Logout function
+  window.logout = function () {
+    fetch("/logout", {
+      method: "POST"
+    }).then(() => {
+      window.location.href = "/login";
+    });
+  };
 });
-
-function logout() {
-  alert("Logging out...");
-  window.location.href = "/front-end/views/Login.html";
-}
