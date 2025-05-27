@@ -38,8 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
         error.style.display = "none";
         success.style.display = "block";
         success.innerText = data.success;
-        form.reset();
+
+        setTimeout(() => {
+          window.location.href = '/user-demographics';
+        }, 1000);
       }
+    })
+    .catch(err => {
+      success.style.display = "none";
+      error.style.display = "block";
+      error.innerText = "Network error. Please try again.";
+      console.error(err);
     });
   });
 });
