@@ -1,5 +1,5 @@
 const db = require('../db/db');
-
+//connect to database
 exports.addActivity = (req, res) => {
   const userId = req.user.id;
   const { activityType, caloriesBurned, activityDate, durationMinutes } = req.body;
