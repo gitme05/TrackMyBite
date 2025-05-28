@@ -1,3 +1,9 @@
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  const nav = document.getElementById("mobileNavbarLinks");
+  nav.classList.toggle("show");
+});
+
+
 document.getElementById("recipeSearch").addEventListener("input", function () {
   const filter = this.value.toLowerCase();
   const recipes = document.querySelectorAll("#recipeList li");
