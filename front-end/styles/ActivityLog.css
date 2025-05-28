@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f8fdf9;
 }
 
 .navbar {
@@ -26,6 +26,12 @@ body {
   height: 40px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
 }
 
 .navbar-toggle {
@@ -52,7 +58,7 @@ body {
   color: #007bff;
 }
 
-/* Mobile toggle button */
+
 .navbar-toggle {
   display: none;
   font-size: 1.8rem;
@@ -62,7 +68,7 @@ body {
   cursor: pointer;
 }
 
-/* Mobile nav menu */
+
 .mobile-nav {
   display: none;
   flex-direction: column;

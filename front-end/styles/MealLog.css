@@ -1,17 +1,16 @@
-/* Reset and base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: #f8fdf9;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f8f8;
+  padding: 1rem 2rem;         
+  background-color: #ffffff;  
   border-bottom: 1px solid #ddd;
 }
 
@@ -29,16 +28,95 @@ body {
   border-radius: 50%;
 }
 
-.navbar nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #333;
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
 }
 
-.navbar nav a.active {
-  font-weight: bold;
-  color: #007BFF;
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-top: 1px solid #ccc;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-nav.show {
+  display: flex;
+}
+
+.mobile-nav a {
+  padding: 0.75rem 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #007bff;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
 
 .container {
   max-width: 700px;

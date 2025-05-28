@@ -6,21 +6,37 @@
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="/front-end/styles/Calculator.css"/>
 </head>
-<body>
-  <header class="navbar">
+<body class="bg-light">
+
+<header class="navbar">
+  <div class="navbar-left">
     <div class="logo">
       <img src="/front-end/assets/Logo.png" alt="Logo" class="logo-img">
       <span>Track My Bite</span>
     </div>
-    <nav>
+  </div>
+
+  <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+
+  <nav class="navbar-links" id="navbarLinks">
         <a href="/main">Home</a>
         <a href="/activity-log">Activity Log</a>
         <a href="/meal-log">Meal Log</a> 
         <a href="/weight-tracker">Weight Tracker</a>
         <a href="/calculator">BMI Calculator</a> 
         <a href="/profile">Profile</a>
-    </nav>
-  </header>
+  </nav>
+</header>
+
+  <nav class="mobile-nav" id="mobileNavbarLinks">
+        <a href="/main">Home</a>
+        <a href="/activity-log">Activity Log</a>
+        <a href="/meal-log">Meal Log</a> 
+        <a href="/weight-tracker">Weight Tracker</a>
+        <a href="/calculator">BMI Calculator</a> 
+        <a href="/profile">Profile</a>
+</nav>
+
 
   <main class="container">
     <h1>BMI Calculator</h1>

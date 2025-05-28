@@ -1,4 +1,7 @@
-// ----- Meal Log -----
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  const nav = document.getElementById("mobileNavbarLinks");
+  nav.classList.toggle("show");
+});
 
 const foodInput = document.getElementById('foodInput');
 const portionInput = document.getElementById('portionInput');

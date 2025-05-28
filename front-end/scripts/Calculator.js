@@ -1,3 +1,8 @@
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  const nav = document.getElementById("mobileNavbarLinks");
+  nav.classList.toggle("show");
+});
+
 function calculateBMI() {
   const height = parseFloat(document.getElementById("height").value) / 100;
   const weight = parseFloat(document.getElementById("weight").value);

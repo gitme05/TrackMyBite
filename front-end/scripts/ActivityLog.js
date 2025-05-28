@@ -1,3 +1,9 @@
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  const nav = document.getElementById("mobileNavbarLinks");
+  nav.classList.toggle("show");
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const activityForm = document.getElementById('activity-form');
   const activityList = document.querySelector('#activity-list ul');

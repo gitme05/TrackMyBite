@@ -1,3 +1,9 @@
+document.getElementById("navbarToggle").addEventListener("click", function () {
+  const nav = document.getElementById("mobileNavbarLinks");
+  nav.classList.toggle("show");
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const weightForm = document.getElementById('weightForm');
   const weightInput = document.getElementById('weight');
