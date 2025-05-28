@@ -25,7 +25,6 @@
 </header>
 
 <main class="main-wrapper">
-
   <aside class="sidebar collapsed" id="sidebar">
     <button id="sidebarToggle" class="icon-btn" aria-label="Toggle Sidebar">☰</button>
     <div class="sidebar-content">
@@ -34,9 +33,9 @@
         <span class="arrow"></span>
       </button>
       <div class="sub-buttons" id="editInfoSubmenu">
-        <button onclick="location.href='/front-end/views/UserDemographics.html'">User Demographics</button>
-        <button onclick="location.href='/front-end/views/UserPreferences.html'">User Preferences</button>
-        <button onclick="location.href='/front-end/views/UserCredentials.html'">User Credentials</button>
+        <button onclick="location.href='/user-demographics'">User Demographics</button>
+        <button onclick="location.href='/user-preferences'">User Preferences</button>
+        <button onclick="location.href='/user-credentials'">User Credentials</button>
       </div>
 
       <button onclick="location.href='/front-end/views/Recipe.html'" class="sidebar-btn">My Recipes</button>
@@ -46,27 +45,27 @@
     </div>
   </aside>
 
-  <!-- Profile Content -->
   <section class="profile-container">
     <div class="profile-card">
       <h2>My Profile</h2>
 
+      <!-- Profile Demographics -->
       <div class="profile-details">
-        <p><strong>First Name:</strong></p>
-        <p><strong>Last Name:</strong></p>
-        <p><strong>Sex:</strong></p>
-        <p><strong>Age:</strong></p>
-        <p><strong>Current Weight:</strong></p>
-        <p><strong>Current Height:</strong></p>
+        <p><strong>First Name:</strong> <span id="firstNameDisplay">-</span></p>
+        <p><strong>Last Name:</strong> <span id="lastNameDisplay">-</span></p>
+        <p><strong>Sex:</strong> <span id="sexDisplay">-</span></p>
+        <p><strong>Age:</strong> <span id="ageDisplay">-</span></p>
+        <p><strong>Current Weight:</strong> <span id="weightDisplay">-</span></p>
+        <p><strong>Current Height:</strong> <span id="heightDisplay">-</span></p>
       </div>
 
       <div class="goals-preferences">
         <h2>Goals & Preferences</h2>
-        <p><strong>Dietary Preferences:</strong></p>
-        <p><strong>Daily Calorie Goal:</strong></p>
-        <p><strong>Weight Goal:</strong></p>
-        <p><strong>Goal Type:</strong></p>
-        <p><strong>Target Date:</strong></p>
+        <p><strong>Dietary Preferences:</strong> <span id="dietaryDisplay">-</span></p>
+        <p><strong>Daily Calorie Goal:</strong> <span id="calorieGoalDisplay">-</span></p>
+        <p><strong>Weight Goal:</strong> <span id="weightGoalDisplay">-</span></p>
+        <p><strong>Goal Type:</strong> <span id="goalTypeDisplay">-</span></p>
+        <p><strong>Target Date:</strong> <span id="targetDateDisplay">-</span></p>
       </div>
 
       <div class="progress-section">
@@ -74,8 +73,8 @@
         <div class="progress-arc">
           <svg width="200" height="100">
             <path d="M10 100 A90 90 0 0 1 190 100" stroke="#0077b6" stroke-width="10" fill="none"/>
-            <text x="100" y="60" text-anchor="middle" font-size="16" fill="#333" id="weightLost">5 kg lost</text>
-            <text x="100" y="80" text-anchor="middle" font-size="14" fill="#555" id="currentWeightText">Current: 70 kg</text>
+            <text x="100" y="60" text-anchor="middle" font-size="16" fill="#333" id="weightLost">-- kg lost</text>
+            <text x="100" y="80" text-anchor="middle" font-size="14" fill="#555" id="currentWeightText">Current: -- kg</text>
           </svg>
         </div>
       </div>
@@ -83,6 +82,6 @@
   </section>
 </main>
 
-<script src="/front-end/scripts/profile.js"></script>
+<script src="/front-end/scripts/profile.js" defer></script>
 </body>
 </html>

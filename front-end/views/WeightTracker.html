@@ -21,9 +21,9 @@
   <nav class="navbar-links" id="navbarLinks">
     <a href="/main">Home</a>
     <a href="/activity-log">Activity Log</a>
-    <a href="/meal-log">Meal Log</a> <!-- make sure you have this route too -->
+    <a href="/meal-log">Meal Log</a> 
     <a href="/weight-tracker">Weight Tracker</a>
-    <a href="/calculator">BMI Calculator</a> <!-- make sure you have this route too -->
+    <a href="/calculator">BMI Calculator</a> 
     <a href="/profile">Profile</a>
   </nav>
 </header>
@@ -37,18 +37,21 @@
   <a href="/front-end/views/Profile.html">Profile</a>
 </nav>
 
-  <main class="weight-tracker-container">
-    <h1>Weight Tracker</h1>
+ <main class="weight-tracker-container">
+  <h1>Weight Tracker</h1>
 
-    <form id="weightForm" class="weight-log-form">
-      <input type="date" id="entryDate" required />
-      <input type="number" id="weight" placeholder="Weight (kg)" required />
-      <button type="submit">Add Entry</button>
-    </form>
+  <form id="weightForm" class="weight-log-form">
+    <input type="date" id="entryDate" required />
+    <input type="number" id="weight" placeholder="Weight (kg)" required />
+    <button type="submit">Add Entry</button>
+  </form>
 
-    <ul id="weightList" class="weight-entry-list"></ul>
-  </main>
+  <ul id="weightList" class="weight-entry-list"></ul>
 
-  <script src="/front-end/scripts/WeightTracker.js"></script>
+  <canvas id="weightChart" width="600" height="300" style="margin-top: 30px;"></canvas>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/front-end/scripts/WeightTracker.js"></script>
 </body>
 </html>
