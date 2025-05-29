@@ -6,12 +6,12 @@ body {
 }
 
 .navbar {
+  background: linear-gradient(to right, #16c172, #1abc9c);
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;         
-  background-color: #ffffff;  
-  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
 }
 
 .logo {
@@ -28,20 +28,6 @@ body {
   border-radius: 50%;
 }
 
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #111;
-}
-
-.navbar-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-
 .navbar-links {
   display: flex;
   gap: 1.5rem;
@@ -49,33 +35,30 @@ body {
 
 .navbar-links a {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #007bff;
+  color: #d1fae5;
 }
-
 
 .navbar-toggle {
-  display: none;
-  font-size: 1.8rem;
   background: none;
   border: none;
-  color: #000;
+  font-size: 1.8rem;
+  color: #ffffff;
+  display: none;
   cursor: pointer;
 }
-
 
 .mobile-nav {
   display: none;
   flex-direction: column;
-  background-color: #fff;
+  background: linear-gradient(to right, #16c172, #1abc9c);
   padding: 1rem 2rem;
   border-top: 1px solid #ccc;
-  animation: slideDown 0.3s ease forwards;
 }
 
 .mobile-nav.show {
@@ -86,45 +69,31 @@ body {
   padding: 0.75rem 0;
   text-decoration: none;
   font-weight: bold;
-  color: #000;
+  color: #ffffff;
   border-bottom: 1px solid #eee;
-  transition: color 0.3s ease;
 }
 
 .mobile-nav a:hover {
-  color: #007bff;
+  color: #1abc9c;
 }
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
   }
-
   .navbar-toggle {
     display: block;
   }
 }
 
-/* Container for BMI Calculator */
 .container {
   max-width: 500px;
   margin: 3em auto;
   background-color: #fff;
   padding: 2em;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1fae5;
+  box-shadow: 0 0 10px #d1fae5(0, 0, 0, 1);
   text-align: center;
 }
 
